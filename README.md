@@ -6,9 +6,8 @@ AI-powered resume optimization studio. Paste or drop a resume (PDF/DOCX), feed a
 - An “ideal” 100% match reference resume.
 
 ## Preview
-Add your screenshots after capture:
-- `![RealHire hero](./public/screenshot-hero.png)`
-- `![Analysis results](./public/screenshot-results.png)`
+![RealHire hero](./public/screenshot-hero.png)
+![Analysis results](./public/screenshot-results.png)
 
 ## Stack
 - Next.js 16 (App Router) + TypeScript
