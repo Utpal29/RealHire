@@ -35,7 +35,6 @@ App lives at http://localhost:3000.
 - `npm run dev` — start dev server
 - `npm run build` — production build
 - `npm run start` — run production build
-- `npm run lint` — lint (PDF worker is ignored in `eslint.config.mjs`)
 
 ## How it works
 1) Client (`src/app/page.tsx`) collects resume + JD.
@@ -43,11 +42,6 @@ App lives at http://localhost:3000.
 3) Response includes score, missing skills, suggestions, rewritten resume, and ideal resume. Client adds `id`/`date` locally for history.
 4) Results render in `ResultsView`; history stored in localStorage via `useHistory`.
 
-## Notable UI bits
-- Calm slate/blue palette, solid gradient background (no neon glows).
-- Custom score dial with trail stroke (no glow ring).
-- Dual-column intake with dropzone + JD textarea, styled CTAs.
-- History drawer (last 10 analyses), local-only storage.
 
 ## File map (key)
 - `src/app/layout.tsx` — fonts, layout shell, hydration suppression.
@@ -72,8 +66,8 @@ Returns
   "suggestions": ["string"],
   "fixedResume": "markdown",
   "idealResume": "markdown",
-  "id": "uuid",     // added client-side
-  "date": "ISO"     // added client-side
+  "id": "uuid",
+  "date": "ISO"
 }
 ```
 
