@@ -1,0 +1,356 @@
+.results {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-bottom: 56px;
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.titleBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: rgba(126, 224, 255, 0.12);
+  border: 1px solid var(--border);
+  color: var(--text-2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(26px, 4vw, 36px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--text-2);
+}
+
+.actionGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ghostButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-1);
+  transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.ghostButton:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  position: relative;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: rgba(5, 10, 24, 0.6);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+
+.cardAccent {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(126, 224, 255, 0.08), transparent);
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.card:hover .cardAccent {
+  opacity: 1;
+}
+
+.metricTitle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-2);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.scoreDial {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.scoreShell {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.04), transparent 70%);
+  border: 1px solid var(--border);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.scoreRing {
+  width: 180px;
+  height: 180px;
+  transform: rotate(-90deg);
+}
+
+.scoreCircleBase {
+  color: rgba(255, 255, 255, 0.08);
+}
+
+.scoreHighlight {
+  color: var(--accent-iris);
+}
+
+.scoreTrail {
+  color: rgba(255, 255, 255, 0.14);
+}
+
+.scoreValue {
+  position: absolute;
+  inset: 28px;
+  border-radius: 12px;
+  background: transparent;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  box-shadow: none;
+}
+
+.scoreNumber {
+  font-size: 44px;
+  font-weight: 800;
+}
+
+.scoreLabel {
+  color: var(--text-3);
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.chip {
+  padding: 8px 10px;
+  border-radius: 999px;
+  background: rgba(255, 184, 105, 0.14);
+  color: #ffd9b0;
+  border: 1px solid rgba(255, 184, 105, 0.3);
+  font-size: 0.9rem;
+}
+
+.suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  color: var(--text-2);
+}
+
+.suggestionItem {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.documentCard {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft), var(--shadow-glow);
+  padding: 18px;
+}
+
+.documentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+
+.documentTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.documentActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.buttonOutline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border-strong);
+  background: rgba(5, 10, 24, 0.8);
+  color: var(--text-1);
+  transition: transform 140ms ease, border-color 140ms ease;
+}
+
+.buttonOutline:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.markdown {
+  color: var(--text-2);
+  line-height: 1.7;
+  margin-top: 12px;
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  color: var(--text-1);
+  margin: 16px 0 8px;
+  font-weight: 700;
+}
+
+.markdown p {
+  margin: 8px 0;
+}
+
+.markdown ul {
+  padding-left: 20px;
+  margin: 6px 0;
+}
+
+.markdown li {
+  margin: 4px 0;
+}
+
+.closeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-1);
+  transition: transform 140ms ease, border-color 140ms ease;
+}
+
+.closeButton:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 8, 20, 0.78);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 50;
+}
+
+.modal {
+  width: min(960px, 100%);
+  max-height: 90vh;
+  background: rgba(5, 10, 24, 0.92);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.modalTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.modalBody {
+  padding: 18px;
+  overflow-y: auto;
+}
+
+@media (max-width: 720px) {
+  .documentActions {
+    width: 100%;
+  }
+
+  .buttonOutline,
+  .ghostButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
